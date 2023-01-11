@@ -1,0 +1,33 @@
+version: '3.9'
+
+
+services:
+  pgdb:
+    image: "postgres:14.3"
+    container_name: roomer_db
+    env_file:
+      - .env/.env.postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - roomer_db_data:/var/lib/postgresql/data
+
+  roomer_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: roomer_api
+    env_file:
+      - .env/.env.dev
+    volumes:
+      - ./:/opt/app
+    depends_on:
+      - pgdb
+    entrypoint: ""
+    command: /home/roomer/docker-entrypoint.sh
+    ports:
+      - "8000:8000"
+
+
+volumes:
+  roomer_db_data:
