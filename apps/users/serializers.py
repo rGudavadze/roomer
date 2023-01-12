@@ -33,9 +33,15 @@ class RegisterSerializer(serializers.ModelSerializer):
         instance = User.objects.create_user(**validated_data)
         return instance
 
+    def to_representation(self, instance):
+        return {"detail": f"{instance.email} you created your account."}
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["id", "email", "first_name", "last_name"]
-        extra_kwargs = {"id": {"read_only": True}}
+        extra_kwargs = {
+            "id": {"read_only": True},
+            "email": {"read_only": True},
+        }
