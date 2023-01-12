@@ -23,9 +23,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         password_confirm = attrs.get("password_confirm")
 
         if password != password_confirm:
-            raise serializers.ValidationError(
-                {"password_confirm": "Passwords are not matched!"}
-            )
+            raise serializers.ValidationError({"password_confirm": "Passwords are not matched!"})
 
         return attrs
 
