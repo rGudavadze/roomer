@@ -35,6 +35,7 @@ AUTH_USER_MODEL = 'users.User'
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_spectacular',
 ]
 
 OUR_APPS = [
@@ -157,6 +158,14 @@ REST_FRAMEWORK = {
     "DEFAULT_FILTER_BACKENDS": [
         'django_filters.rest_framework.DjangoFilterBackend',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Roomer',
+    'DESCRIPTION': 'Book a room in the office',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 
 SIMPLE_JWT = {
