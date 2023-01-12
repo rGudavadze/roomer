@@ -42,6 +42,7 @@ OUR_APPS = [
     "apps.base",
     "apps.users",
     "apps.shared",
+    "apps.rooms",
 ]
 
 INSTALLED_APPS = (
