@@ -191,3 +191,31 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'custom_formatter': {
+            'format': '[{asctime}] {levelname} {message}',
+            'style': '{'
+        }
+    },
+    'handlers': {
+        'custom_handler': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'custom_formatter'
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'info.log',
+            'formatter': 'custom_formatter'
+        }
+    },
+    'loggers': {
+        'logger': {
+            'handlers': ['custom_handler', 'file'],
+            'level': 'INFO',
+        }
+    }
+}
