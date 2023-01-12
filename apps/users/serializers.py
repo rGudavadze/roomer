@@ -9,7 +9,16 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["id", "email", "first_name", "last_name", "password", "password_confirm"]
+        fields = [
+            "id",
+            "email",
+            "password",
+            "password_confirm",
+            "first_name",
+            "last_name",
+            "phone_code",
+            "phone_number",
+        ]
         extra_kwargs = {
             "id": {"read_only": True},
             "password": {"write_only": True},
@@ -40,7 +49,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id", "email", "first_name", "last_name"]
+        fields = ["id", "email", "first_name", "last_name", "phone_code", "phone_number"]
         extra_kwargs = {
             "id": {"read_only": True},
             "email": {"read_only": True},

@@ -40,6 +40,16 @@ class User(AbstractUser, BaseModel):
             MinLengthValidator(6),
         ],
     )
+    phone_code = models.ForeignKey(
+        to="shared.PhoneCode",
+        help_text=_("Phone Code"),
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+    )
+    phone_number = models.CharField(
+        _("phone_number"), max_length=256, help_text=_("Phone Number"), null=True, blank=True
+    )
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []

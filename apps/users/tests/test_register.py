@@ -4,6 +4,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+from apps.shared.factories import PhoneCodeFactory
 from apps.users.factories import UserFactory
 from apps.utils.logger import logger
 
@@ -11,6 +12,7 @@ from apps.utils.logger import logger
 class AccountRegisterTestCase(APITestCase):
     def setUp(self) -> None:
         self.user = UserFactory.create(email="userexists@gmail.com")
+        self.phone_code = PhoneCodeFactory.create()
         self.url = reverse("register-user")
 
         self.body = dict(
@@ -19,6 +21,8 @@ class AccountRegisterTestCase(APITestCase):
             password_confirm="123456",
             first_name="firstname",
             last_name="lastname",
+            phone_code=self.phone_code.id,
+            phone_number="584879651",
         )
 
     @patch.object(logger, "info")
