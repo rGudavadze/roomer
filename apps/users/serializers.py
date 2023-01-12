@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from apps.users.models import User
+from apps.utils.logger import logger
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -34,6 +35,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         return instance
 
     def to_representation(self, instance):
+        logger.info(f"User has been registered - ID: {instance.id}")
         return {"detail": f"{instance.email} you created your account."}
 
 

@@ -15,6 +15,13 @@ class User(AbstractUser, BaseModel):
         help_text="Email Field",
         validators=[EmailValidator()],
     )
+    username = models.CharField(
+        max_length=256,
+        help_text=_("Username Field"),
+        null=True,
+        blank=True,
+        validators=[MinLengthValidator(6)],
+    )
     first_name = models.CharField(
         _("first_name"),
         max_length=256,
