@@ -43,6 +43,7 @@ OUR_APPS = [
     "apps.users",
     "apps.shared",
     "apps.rooms",
+    "apps.booking",
 ]
 
 INSTALLED_APPS = (

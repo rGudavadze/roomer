@@ -8,4 +8,5 @@ urlpatterns = [
     path("users/", include("apps.users.urls")),
     path("shared/", include("apps.shared.urls")),
     path("rooms/", include("apps.rooms.urls")),
+    path("bookings/", include("apps.booking.urls")),
 ] + swagger_urls
