@@ -1,8 +1,5 @@
 from rest_framework import status
-from rest_framework.generics import (
-    ListCreateAPIView,
-    RetrieveUpdateDestroyAPIView,
-)
+from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
@@ -25,7 +22,7 @@ class BookingListCreateView(ListCreateAPIView):
         return self.queryset.filter(status=StatusChoice.active.value)
 
 
-class BookingDetailsView(RetrieveUpdateDestroyAPIView):
+class BookingDetailsView(RetrieveDestroyAPIView):
     serializer_class = BookingSerializer
     queryset = Booking.objects.all()
     permission_classes = (IsBookingOwner,)
