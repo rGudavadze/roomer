@@ -22,7 +22,7 @@ class BookingListCreateView(ListCreateAPIView):
         if current_user.is_superuser:
             return self.queryset.all()
 
-        return self.queryset.filter(user=current_user)
+        return self.queryset.filter(status=StatusChoice.active.value)
 
 
 class BookingDetailsView(RetrieveUpdateDestroyAPIView):

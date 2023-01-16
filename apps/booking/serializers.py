@@ -1,3 +1,4 @@
+from django.db.models import Q
 from rest_framework import serializers
 
 from apps.booking.enums import StatusChoice
@@ -32,10 +33,10 @@ class BookingSerializer(serializers.ModelSerializer):
         end_time = attrs.get("end_time")
 
         bookings = self.Meta.model.objects.filter(
+            Q(start_time__gte=start_time, start_time__lt=end_time)
+            | Q(end_time__gt=start_time, end_time__lte=end_time),
             room=room,
             status=StatusChoice.active.value,
-            start_time__gte=start_time,
-            end_time__lte=end_time,
         )
 
         return not bookings.exists()
