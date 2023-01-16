@@ -29,7 +29,7 @@ class BookingDetailsView(RetrieveDestroyAPIView):
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
-        instance.status = StatusChoice.cancelled
+        instance.status = StatusChoice.cancelled.value
         instance.save()
 
         return Response(status=status.HTTP_204_NO_CONTENT)
