@@ -6,6 +6,7 @@ from apps.utils.schemas import SharedSwaggerSchema
 
 
 class PhoneCodeView(ModelViewSet):
+    schema = SharedSwaggerSchema()
     serializer_class = PhoneCodeSerializer
     queryset = PhoneCode.objects.all()
     http_method_names = ("get",)
