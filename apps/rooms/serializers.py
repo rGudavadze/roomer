@@ -1,13 +1,6 @@
 from rest_framework import serializers
 
-from apps.rooms.models import Inventory, Room
-
-
-class InventorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Inventory
-        fields = ["id", "name"]
-        extra_kwargs = {"id": {"read_only": True}}
+from apps.rooms.models import Room
 
 
 class RoomSerializer(serializers.ModelSerializer):

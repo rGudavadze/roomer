@@ -4,15 +4,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
 
 from apps.booking.enums import StatusChoice
-from apps.rooms.models import Inventory, Room
+from apps.rooms.models import Room
 from apps.rooms.permissions import IsAdminOrReadOnly
-from apps.rooms.serializers import InventorySerializer, RoomSerializer
-
-
-class InventoryViewSet(ModelViewSet):
-    serializer_class = InventorySerializer
-    queryset = Inventory.objects.all()
-    permission_classes = (IsAdminOrReadOnly,)
+from apps.rooms.serializers import RoomSerializer
 
 
 class RoomViewSet(ModelViewSet):
