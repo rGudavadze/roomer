@@ -17,13 +17,17 @@ class Booking(BaseModel):
         default=StatusChoice.active.value,
         help_text=_("Status"),
     )
-    user = models.ForeignKey(to="users.User", on_delete=models.DO_NOTHING, help_text=_("User"))
-    room = models.ForeignKey(to="rooms.Room", on_delete=models.DO_NOTHING, help_text=_("Room"))
+    user = models.ForeignKey(
+        to="users.User", on_delete=models.DO_NOTHING, related_name="bookings", help_text=_("User")
+    )
+    room = models.ForeignKey(
+        to="rooms.Room", on_delete=models.DO_NOTHING, related_name="bookings", help_text=_("Room")
+    )
 
     class Meta:
         ordering = ["-start_time"]
         constraints = [
-            CheckConstraint(check=Q(end_time__gte=F("start_time")), name="start_end_time_check"),
+            CheckConstraint(check=Q(end_time__gt=F("start_time")), name="start_end_time_check"),
         ]
 
     def __str__(self):
