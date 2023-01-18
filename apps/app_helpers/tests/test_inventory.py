@@ -2,7 +2,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from apps.shared.factories import InventoryFactory
+from apps.app_helpers.factories import InventoryFactory
 
 
 class BaseInventoryTestCase(APITestCase):

@@ -42,8 +42,8 @@ THIRD_PARTY_APPS = [
 
 OUR_APPS = [
     "apps.base",
+    "apps.app_helpers",
     "apps.users",
-    "apps.shared",
     "apps.rooms",
     "apps.booking",
 ]

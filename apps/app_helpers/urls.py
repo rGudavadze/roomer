@@ -1,7 +1,7 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from apps.shared.views import InventoryViewSet, PhoneCodeView
+from apps.app_helpers.views import InventoryViewSet, PhoneCodeView
 
 router = DefaultRouter()
 

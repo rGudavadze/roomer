@@ -12,7 +12,7 @@ class Room(BaseModel):
     seats = models.IntegerField(
         _("seats"), validators=[MinValueValidator(1)], help_text=_("Number of seats")
     )
-    inventories = models.ManyToManyField(to="shared.Inventory", help_text=_("Inventories"))
+    inventories = models.ManyToManyField(to="app_helpers.Inventory", help_text=_("Inventories"))
 
     def __str__(self):
         return self.name

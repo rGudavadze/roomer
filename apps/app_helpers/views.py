@@ -1,7 +1,10 @@
 from rest_framework.viewsets import ModelViewSet
 
-from apps.shared.models import Inventory, PhoneCode
-from apps.shared.serializers import InventorySerializer, PhoneCodeSerializer
+from apps.app_helpers.models import Inventory, PhoneCode
+from apps.app_helpers.serializers import (
+    InventorySerializer,
+    PhoneCodeSerializer,
+)
 from apps.utils.schemas import SharedSwaggerSchema
 
 

@@ -41,7 +41,7 @@ class User(AbstractUser, BaseModel):
         ],
     )
     phone_code = models.ForeignKey(
-        to="shared.PhoneCode",
+        to="app_helpers.PhoneCode",
         help_text=_("Phone Code"),
         null=True,
         blank=True,

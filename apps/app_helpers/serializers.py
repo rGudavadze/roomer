@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from apps.shared.models import Inventory, PhoneCode
+from apps.app_helpers.models import Inventory, PhoneCode
 
 
 class PhoneCodeSerializer(serializers.ModelSerializer):

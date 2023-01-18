@@ -10,7 +10,7 @@ class PhoneCode(models.Model):
         return f"{self.country} {self.code}"
 
     class Meta:
-        app_label = "shared"
+        app_label = "app_helpers"
         verbose_name = "Phone Code"
         verbose_name_plural = "Phone Codes"
         ordering = ["country"]

@@ -4,7 +4,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from apps.shared.factories import PhoneCodeFactory
+from apps.app_helpers.factories import PhoneCodeFactory
 from apps.users.factories import UserFactory
 from apps.utils.logger import logger
 

@@ -7,11 +7,11 @@ class PhoneCodeFactory(DjangoModelFactory):
     code = factory.Faker("country_calling_code")
 
     class Meta:
-        model = "shared.PhoneCode"
+        model = "app_helpers.PhoneCode"
 
 
 class InventoryFactory(DjangoModelFactory):
     name = factory.Faker("word")
 
     class Meta:
-        model = "shared.Inventory"
+        model = "app_helpers.Inventory"
