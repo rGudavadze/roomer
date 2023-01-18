@@ -38,6 +38,7 @@ THIRD_PARTY_APPS = [
     "rest_framework_simplejwt",
     "drf_spectacular",
     "django_filters",
+    "django_celery_beat",
 ]
 
 OUR_APPS = [
@@ -106,6 +107,19 @@ DATABASES = {
     }
 }
 
+# Celery broker configurations
+CELERY_BROKER_URL = "amqp://{username}:{password}@{host}:{port}/".format(
+    username=ENVS.get("RABBITMQ_USER"),
+    password=ENVS.get("RABBITMQ_PASS"),
+    host=ENVS.get("RABBITMQ_HOST"),
+    port=ENVS.get("RABBITMQ_PORT"),
+)
+CELERY_RESULT_BACKEND = "rpc://{username}:{password}@{host}:{port}/".format(
+    username=ENVS.get("RABBITMQ_USER"),
+    password=ENVS.get("RABBITMQ_PASS"),
+    host=ENVS.get("RABBITMQ_HOST"),
+    port=ENVS.get("RABBITMQ_PORT"),
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
