@@ -14,4 +14,4 @@ class InventoryFactory(DjangoModelFactory):
     name = factory.Faker("word")
 
     class Meta:
-        model = "rooms.Inventory"
+        model = "shared.Inventory"

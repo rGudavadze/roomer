@@ -2,8 +2,9 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from apps.rooms.factories import InventoryFactory, RoomFactory
+from apps.rooms.factories import RoomFactory
 from apps.rooms.models import Room
+from apps.shared.factories import InventoryFactory
 from apps.users.factories import UserFactory
 
 
