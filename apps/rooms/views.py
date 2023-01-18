@@ -11,7 +11,7 @@ from apps.rooms.serializers import RoomSerializer
 
 class RoomViewSet(ModelViewSet):
     serializer_class = RoomSerializer
-    queryset = Room.objects.all()
+    queryset = Room.objects.all().prefetch_related("inventories")
     permission_classes = (IsAdminOrReadOnly,)
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["seats", "bookings__start_time", "bookings__end_time"]
@@ -25,13 +25,13 @@ class RoomViewSet(ModelViewSet):
             raise ValidationError("start_time and end_time both or none")
 
         if start_time and end_time:
+            # TODO: remove query params from filter.
             return self._available_rooms(start_time, end_time)
 
         return self.queryset
 
-    @staticmethod
-    def _available_rooms(start_time, end_time):
-        rooms = Room.objects.exclude(
+    def _available_rooms(self, start_time, end_time):
+        rooms = self.queryset.exclude(
             Q(bookings__start_time__gte=start_time, bookings__start_time__lt=end_time)
             | Q(bookings__end_time__gt=start_time, bookings__end_time__lte=end_time)
             | Q(bookings__start_time__lte=start_time, bookings__end_time__gte=end_time),
