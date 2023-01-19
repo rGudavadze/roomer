@@ -7,6 +7,7 @@ from apps.booking.enums import StatusChoice
 from apps.booking.models import Booking
 from apps.booking.permissions import IsBookingOwner
 from apps.booking.serializers import BookingSerializer
+from apps.utils.logger import logger
 
 
 class BookingListCreateView(ListCreateAPIView):
@@ -36,8 +37,9 @@ class BookingDetailsView(RetrieveDestroyAPIView):
     permission_classes = (IsBookingOwner,)
 
     def destroy(self, request, *args, **kwargs):
-        instance = self.get_object()
+        instance: Booking = self.get_object()
         instance.status = StatusChoice.cancelled.value
         instance.save()
 
+        logger.info(f"User - {instance.user_id} has cancelled reservation of room - {instance.room_id}")
         return Response(status=status.HTTP_204_NO_CONTENT)

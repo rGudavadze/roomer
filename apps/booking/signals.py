@@ -4,6 +4,7 @@ from django.utils import timezone
 
 from apps.booking.models import Booking
 from apps.booking.tasks import finish_booking
+from apps.utils.logger import logger
 
 
 @receiver(post_save, sender=Booking)
@@ -19,6 +20,6 @@ def finish_booking_signal(sender, instance: Booking, created: bool, **kwargs) ->
 
     if not created:
         return
-
+    logger.info(f"Room - {instance.room_id} has been reserved by user - {instance.user_id}")
     timer = instance.end_time - timezone.now()
     finish_booking.apply_async((instance.id,), countdown=timer.seconds)
