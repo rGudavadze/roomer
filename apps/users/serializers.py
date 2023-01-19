@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from apps.users.models import User
 from apps.utils.logger import logger
+from apps.utils.validators import PasswordMatchValidator
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -24,17 +25,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             "password": {"write_only": True},
             "password_confirm": {"write_only": True},
         }
-
-    def validate(self, attrs):
-        attrs = super().validate(attrs)
-
-        password = attrs.get("password")
-        password_confirm = attrs.get("password_confirm")
-
-        if password != password_confirm:
-            raise serializers.ValidationError({"password_confirm": "Passwords are not matched!"})
-
-        return attrs
+        validators = [PasswordMatchValidator()]
 
     def create(self, validated_data):
         validated_data.pop("password_confirm")
