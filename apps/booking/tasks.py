@@ -14,8 +14,8 @@ def finish_booking(pk: UUID) -> None:
     :return:
     """
 
-    instance = Booking.objects.get(pk=pk)
+    instance = Booking.objects.filter(pk=pk).first()
 
-    if instance.status == StatusChoice.active.value:
+    if instance and instance.status == StatusChoice.active.value:
         instance.status = StatusChoice.finished.value
         instance.save()
