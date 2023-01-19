@@ -1,5 +1,7 @@
+from datetime import datetime
+
 from django.core.exceptions import ValidationError
-from django.db.models import Q
+from django.db.models import Q, QuerySet
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
 
@@ -10,6 +12,10 @@ from apps.rooms.serializers import RoomSerializer
 
 
 class RoomViewSet(ModelViewSet):
+    """
+    ViewSet to handle all request methods.
+    """
+
     serializer_class = RoomSerializer
     queryset = Room.objects.all().prefetch_related("inventories")
     permission_classes = (IsAdminOrReadOnly,)
@@ -30,7 +36,14 @@ class RoomViewSet(ModelViewSet):
 
         return self.queryset
 
-    def _available_rooms(self, start_time, end_time):
+    def _available_rooms(self, start_time: datetime, end_time: datetime) -> QuerySet:
+        """
+        Method to find all available rooms in specific range of time.
+        :param start_time:
+        :param end_time:
+        :return:
+        """
+
         rooms = self.queryset.exclude(
             Q(bookings__start_time__gte=start_time, bookings__start_time__lt=end_time)
             | Q(bookings__end_time__gt=start_time, bookings__end_time__lte=end_time)
