@@ -11,6 +11,10 @@ class UsersConfig(AppConfig):
 
     @classmethod
     def ready(cls):
+        """
+        Create superuser when app inits.
+        """
+
         try:
             user_model = get_user_model()
             if user_model.objects.filter(is_superuser=True).exists():

@@ -4,6 +4,10 @@ from apps.base.managers import BaseManager
 
 
 class CustomUserManager(BaseManager, BaseUserManager):
+    """
+    Custom manager for User model.
+    """
+
     def create_user(self, email, password, **extra_fields):
         if not email:
             raise ValueError("The Email must be set")

@@ -10,16 +10,28 @@ from apps.users.serializers import RegisterSerializer, UserSerializer
 
 
 class RegisterAPIView(CreateAPIView):
+    """
+    APIView to register users.
+    """
+
     serializer_class = RegisterSerializer
 
 
 class ListUserAPIView(ListAPIView):
+    """
+    APIView to get all users data.
+    """
+
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = (IsAdminUser,)
 
 
 class DetailUserAPIView(RetrieveUpdateDestroyAPIView):
+    """
+    APIView to retrieve, update or delete specific user by ID.
+    """
+
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = (IsAuthenticated,)
