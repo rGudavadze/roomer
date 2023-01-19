@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 from django.db.models import Q
 from rest_framework import serializers
 
@@ -27,7 +29,13 @@ class BookingSerializer(serializers.ModelSerializer):
 
         return attrs
 
-    def _check_room_availability(self, attrs):
+    def _check_room_availability(self, attrs: OrderedDict):
+        """
+        Method to check if room is available in specific range of time.
+        :param attrs: OrderDict from validate method
+        :return:
+        """
+
         room = attrs.get("room")
         start_time = attrs.get("start_time")
         end_time = attrs.get("end_time")

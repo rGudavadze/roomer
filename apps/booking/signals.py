@@ -7,7 +7,16 @@ from apps.booking.tasks import finish_booking
 
 
 @receiver(post_save, sender=Booking)
-def finish_booking_signal(sender, instance, created, **kwargs):
+def finish_booking_signal(sender, instance: Booking, created: bool, **kwargs) -> None:
+    """
+    Signal to execute finish_booking function as background task after several seconds.
+    :param sender: Booking model
+    :param instance: Booking instance
+    :param created: bool
+    :param kwargs:
+    :return:
+    """
+
     if not created:
         return
 

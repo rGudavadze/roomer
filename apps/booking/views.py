@@ -10,6 +10,10 @@ from apps.booking.serializers import BookingSerializer
 
 
 class BookingListCreateView(ListCreateAPIView):
+    """
+    APIView to create booking or list all the bookings.
+    """
+
     serializer_class = BookingSerializer
     queryset = Booking.objects.all()
     permission_classes = (IsAuthenticated,)
@@ -23,6 +27,10 @@ class BookingListCreateView(ListCreateAPIView):
 
 
 class BookingDetailsView(RetrieveDestroyAPIView):
+    """
+    APIView to get specific booking by id data or delete it.
+    """
+
     serializer_class = BookingSerializer
     queryset = Booking.objects.all()
     permission_classes = (IsBookingOwner,)
