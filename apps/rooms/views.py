@@ -6,6 +6,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
 
 from apps.booking.enums import StatusChoice
+from apps.booking.models import Booking
 from apps.rooms.models import Room
 from apps.rooms.permissions import IsAdminOrReadOnly
 from apps.rooms.serializers import RoomSerializer
@@ -20,7 +21,7 @@ class RoomViewSet(ModelViewSet):
     queryset = Room.objects.all().prefetch_related("inventories")
     permission_classes = (IsAdminOrReadOnly,)
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ["seats", "bookings__start_time", "bookings__end_time"]
+    filterset_fields = ["bookings__end_time", "bookings__start_time", "seats"]
 
     def get_queryset(self):
         attrs = self.request.GET
@@ -44,11 +45,13 @@ class RoomViewSet(ModelViewSet):
         :return:
         """
 
-        rooms = self.queryset.exclude(
-            Q(bookings__start_time__gte=start_time, bookings__start_time__lt=end_time)
-            | Q(bookings__end_time__gt=start_time, bookings__end_time__lte=end_time)
-            | Q(bookings__start_time__lte=start_time, bookings__end_time__gte=end_time),
-            bookings__status=StatusChoice.active.value,
-        ).prefetch_related("bookings")
+        reserved_room_ids = Booking.objects.filter(
+            Q(start_time__gte=start_time, start_time__lt=end_time)
+            | Q(end_time__gt=start_time, end_time__lte=end_time)
+            | Q(start_time__lte=start_time, end_time__gte=end_time),
+            status=StatusChoice.active.value,
+        ).values_list("room_id", flat=True)
+
+        rooms = self.queryset.exclude(id__in=set(reserved_room_ids))
 
         return rooms
