@@ -4,6 +4,10 @@ custom_logger = logging.getLogger("logger")
 
 
 class Logger:
+    """
+    Custom logger class
+    """
+
     @staticmethod
     def debug(message):
         custom_logger.debug(message)
