@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -5,6 +7,7 @@ from rest_framework.test import APITestCase
 from apps.booking.enums import StatusChoice
 from apps.booking.factories import BookingFactory
 from apps.users.factories import UserFactory
+from apps.utils.logger import logger
 
 
 class BaseBookingDetailTestCase(APITestCase):
@@ -43,7 +46,8 @@ class BookingRetrieveTestCase(BaseBookingDetailTestCase):
 
 
 class BookingDestroyTestCase(BaseBookingDetailTestCase):
-    def test_booking_destroy(self):
+    @patch.object(logger, "info")
+    def test_booking_destroy(self, mock_logger):
         response = self.client.delete(self.url)
 
         self.booking.refresh_from_db()
