@@ -7,6 +7,10 @@ from apps.base.managers import BaseManager
 
 
 class BaseModel(models.Model):
+    """
+    Base Model which will be extended by other models.
+    """
+
     id = models.UUIDField(
         _("id"), primary_key=True, default=uuid.uuid4, editable=False, help_text=_("ID")
     )
@@ -20,5 +24,9 @@ class BaseModel(models.Model):
         abstract = True
 
     def delete(self, using=None, keep_parents=False):
+        """
+        Soft DELETE method.
+        """
+
         self.deleted = True
         self.save()
