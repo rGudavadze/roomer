@@ -4,11 +4,10 @@ from django.utils.translation import gettext_lazy as _
 
 from apps.base.models import BaseModel
 from apps.booking.enums import StatusChoice
-from apps.utils.validators import time_future_validation
 
 
 class Booking(BaseModel):
-    start_time = models.DateTimeField("start_time", validators=[time_future_validation])
+    start_time = models.DateTimeField("start_time")
     end_time = models.DateTimeField("end_time")
     status = models.CharField(
         "status",

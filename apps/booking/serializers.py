@@ -5,10 +5,12 @@ from rest_framework import serializers
 
 from apps.booking.enums import StatusChoice
 from apps.booking.models import Booking
+from apps.utils.validators import StartTimeValidator
 
 
 class BookingSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    start_time = serializers.DateTimeField(validators=[StartTimeValidator()])
 
     class Meta:
         model = Booking
