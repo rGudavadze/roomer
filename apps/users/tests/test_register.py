@@ -49,7 +49,7 @@ class AccountRegisterTestCase(APITestCase):
             "user with this email already exists.",
         )
 
-    def test_register_unmatched_password(self):
+    def test_register_mismatched_password(self):
         self.body.update({"password_confirm": "otherpassword"})
         response = self.client.post(
             self.url,
@@ -58,8 +58,8 @@ class AccountRegisterTestCase(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(
-            response.data.get("password_confirm")[0],
-            "Passwords are not matched!",
+            response.data.get("detail"),
+            "Password and Confirm Password fields must have the same value.",
         )
 
     def test_register_password_less_than_6(self):
