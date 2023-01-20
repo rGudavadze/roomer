@@ -5,6 +5,10 @@ from rest_framework import serializers
 
 from apps.booking.enums import StatusChoice
 from apps.booking.models import Booking
+from apps.utils.exceptions import (
+    RoomNotAvailableException,
+    TimeValidationException,
+)
 from apps.utils.validators import StartTimeValidator
 
 
@@ -24,10 +28,10 @@ class BookingSerializer(serializers.ModelSerializer):
         attrs = super().validate(attrs)
 
         if attrs.get("start_time") >= attrs.get("end_time"):
-            raise serializers.ValidationError({"end_time": "End time must be greater than start time."})
+            raise TimeValidationException()
 
         if not self._check_room_availability(attrs):
-            raise serializers.ValidationError({"detail": "Room is not available at this time."})
+            raise RoomNotAvailableException()
 
         return attrs
 
