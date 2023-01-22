@@ -67,7 +67,7 @@ jobs:
           DATABASE_PORT=5432
           DATABASE_NAME=roomer-dev-db
           DATABASE_USER=roomer-user
-          DATABASE_PASSWORD=roomer_password
+          DATABASE_PASSWORD=roomer-password
           DJANGO_SUPERUSER_EMAIL=admin@gmail.com
           DJANGO_SUPERUSER_USERNAME=admin
           DJANGO_SUPERUSER_PASSWORD=roma123@
