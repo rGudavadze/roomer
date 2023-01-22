@@ -37,7 +37,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(response.data.get("start_time"))
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_end_time_eq_prev_booking_start_time(self, mock_logger, mock_receiver):
         self.body.update({"end_time": self.prev_booking.start_time})
@@ -47,7 +47,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(response.data.get("start_time"))
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_end_time_in_range(self, mock_logger, mock_receiver):
         self.body.update({"start_time": str(timezone.now() + timedelta(minutes=120))})
@@ -57,7 +57,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_end_time_eq_prev_booking_end_time(self, mock_logger, mock_receiver):
         self.body.update({"end_time": self.prev_booking.end_time})
@@ -67,7 +67,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_and_end_time_out_of_range(self, mock_logger, mock_receiver):
         response = self.client.post(self.url, data=self.body)
@@ -75,7 +75,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_eq_prev_booking_start_time_end_time_in_range(
         self, mock_logger, mock_receiver
@@ -92,7 +92,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_end_time_eq_prev_booking_start_time_end_time(
         self, mock_logger, mock_receiver
@@ -109,7 +109,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_in_range_end_time_eq_prev_booking_end_time(
         self, mock_logger, mock_receiver
@@ -126,7 +126,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_eq_prev_booking_start_time_end_time_out_of_range(
         self, mock_logger, mock_receiver
@@ -142,7 +142,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_in_range_end_time_out_of_range(self, mock_logger, mock_receiver):
         self.body.update(
@@ -156,7 +156,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data.get("detail"), "Room is not available in this range of time.")
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_eq_prev_booking_end_time(self, mock_logger, mock_receiver):
         self.body.update(
@@ -170,7 +170,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(response.data.get("start_time"))
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_booking_create_start_time_gt_prev_booking_end_time(self, mock_logger, mock_receiver):
         self.body.update({"start_time": str(timezone.now() + timedelta(minutes=180))})
@@ -180,7 +180,7 @@ class BookingCreateTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(response.data.get("start_time"))
 
-    @patch("apps.booking.signals.finish_booking_signal")
+    @patch("apps.booking.signals.finish_booking")
     @patch.object(logger, "info")
     def test_create_cancelled_prev_booking(self, mock_logger, mock_receiver):
         self.prev_booking.status = StatusChoice.cancelled.value
