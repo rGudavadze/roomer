@@ -11,6 +11,7 @@ on:
 
 env:
   DJANGO_SETTINGS_MODULE: roomer.settings.test
+  SECRET_KEY: di4f34F#F$fwkefnkwf
 
 jobs:
   testing-job:
@@ -58,8 +59,8 @@ jobs:
 
       - name: Run Migrations
         run: |
-          python manage.py migrate --settings=${{ env.DJANGO_SETTINGS_MODULE }}
+          SECRET_KEY=${{ env.SECRET_KEY }} python manage.py migrate --settings=${{ env.DJANGO_SETTINGS_MODULE }}
 
       - name: Run Tests
         run: |
-          coverage run manage.py test --settings=${{ env.DJANGO_SETTINGS_MODULE }} && coverage report
+          SECRET_KEY=${{ env.SECRET_KEY }} python manage.py test --settings=${{ env.DJANGO_SETTINGS_MODULE }}
