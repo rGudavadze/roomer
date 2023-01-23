@@ -1,0 +1,1938 @@
+[
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 0,
+        "fields": {
+            "country": "AF",
+            "code": "+93"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 1,
+        "fields": {
+            "country": "AX",
+            "code": "+358"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 2,
+        "fields": {
+            "country": "AL",
+            "code": "+355"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 3,
+        "fields": {
+            "country": "DZ",
+            "code": "+213"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 4,
+        "fields": {
+            "country": "AS",
+            "code": "+1684"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 5,
+        "fields": {
+            "country": "AD",
+            "code": "+376"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 6,
+        "fields": {
+            "country": "AO",
+            "code": "+244"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 7,
+        "fields": {
+            "country": "AI",
+            "code": "+1264"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 8,
+        "fields": {
+            "country": "AQ",
+            "code": "+672"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 9,
+        "fields": {
+            "country": "AG",
+            "code": "+1268"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 10,
+        "fields": {
+            "country": "AR",
+            "code": "+54"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 11,
+        "fields": {
+            "country": "AM",
+            "code": "+374"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 12,
+        "fields": {
+            "country": "AW",
+            "code": "+297"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 13,
+        "fields": {
+            "country": "AU",
+            "code": "+61"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 14,
+        "fields": {
+            "country": "AT",
+            "code": "+43"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 15,
+        "fields": {
+            "country": "AZ",
+            "code": "+994"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 16,
+        "fields": {
+            "country": "BS",
+            "code": "+1242"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 17,
+        "fields": {
+            "country": "BH",
+            "code": "+973"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 18,
+        "fields": {
+            "country": "BD",
+            "code": "+880"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 19,
+        "fields": {
+            "country": "BB",
+            "code": "+1246"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 20,
+        "fields": {
+            "country": "BY",
+            "code": "+375"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 21,
+        "fields": {
+            "country": "BE",
+            "code": "+32"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 22,
+        "fields": {
+            "country": "BZ",
+            "code": "+501"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 23,
+        "fields": {
+            "country": "BJ",
+            "code": "+229"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 24,
+        "fields": {
+            "country": "BM",
+            "code": "+1441"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 25,
+        "fields": {
+            "country": "BT",
+            "code": "+975"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 26,
+        "fields": {
+            "country": "BO",
+            "code": "+591"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 27,
+        "fields": {
+            "country": "BA",
+            "code": "+387"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 28,
+        "fields": {
+            "country": "BW",
+            "code": "+267"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 29,
+        "fields": {
+            "country": "BR",
+            "code": "+55"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 30,
+        "fields": {
+            "country": "IO",
+            "code": "+246"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 31,
+        "fields": {
+            "country": "BN",
+            "code": "+673"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 32,
+        "fields": {
+            "country": "BG",
+            "code": "+359"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 33,
+        "fields": {
+            "country": "BF",
+            "code": "+226"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 34,
+        "fields": {
+            "country": "BI",
+            "code": "+257"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 35,
+        "fields": {
+            "country": "KH",
+            "code": "+855"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 36,
+        "fields": {
+            "country": "CM",
+            "code": "+237"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 37,
+        "fields": {
+            "country": "CA",
+            "code": "+1"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 38,
+        "fields": {
+            "country": "CV",
+            "code": "+238"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 39,
+        "fields": {
+            "country": "KY",
+            "code": "+ 345"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 40,
+        "fields": {
+            "country": "CF",
+            "code": "+236"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 41,
+        "fields": {
+            "country": "TD",
+            "code": "+235"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 42,
+        "fields": {
+            "country": "CL",
+            "code": "+56"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 43,
+        "fields": {
+            "country": "CN",
+            "code": "+86"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 44,
+        "fields": {
+            "country": "CX",
+            "code": "+61"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 45,
+        "fields": {
+            "country": "CC",
+            "code": "+61"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 46,
+        "fields": {
+            "country": "CO",
+            "code": "+57"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 47,
+        "fields": {
+            "country": "KM",
+            "code": "+269"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 48,
+        "fields": {
+            "country": "CG",
+            "code": "+242"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 49,
+        "fields": {
+            "country": "CD",
+            "code": "+243"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 50,
+        "fields": {
+            "country": "CK",
+            "code": "+682"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 51,
+        "fields": {
+            "country": "CR",
+            "code": "+506"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 52,
+        "fields": {
+            "country": "CI",
+            "code": "+225"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 53,
+        "fields": {
+            "country": "HR",
+            "code": "+385"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 54,
+        "fields": {
+            "country": "CU",
+            "code": "+53"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 55,
+        "fields": {
+            "country": "CY",
+            "code": "+357"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 56,
+        "fields": {
+            "country": "CZ",
+            "code": "+420"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 57,
+        "fields": {
+            "country": "DK",
+            "code": "+45"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 58,
+        "fields": {
+            "country": "DJ",
+            "code": "+253"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 59,
+        "fields": {
+            "country": "DM",
+            "code": "+1767"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 60,
+        "fields": {
+            "country": "DO",
+            "code": "+1849"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 61,
+        "fields": {
+            "country": "EC",
+            "code": "+593"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 62,
+        "fields": {
+            "country": "EG",
+            "code": "+20"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 63,
+        "fields": {
+            "country": "SV",
+            "code": "+503"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 64,
+        "fields": {
+            "country": "GQ",
+            "code": "+240"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 65,
+        "fields": {
+            "country": "ER",
+            "code": "+291"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 66,
+        "fields": {
+            "country": "EE",
+            "code": "+372"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 67,
+        "fields": {
+            "country": "ET",
+            "code": "+251"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 68,
+        "fields": {
+            "country": "FK",
+            "code": "+500"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 69,
+        "fields": {
+            "country": "FO",
+            "code": "+298"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 70,
+        "fields": {
+            "country": "FJ",
+            "code": "+679"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 71,
+        "fields": {
+            "country": "FI",
+            "code": "+358"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 72,
+        "fields": {
+            "country": "FR",
+            "code": "+33"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 73,
+        "fields": {
+            "country": "GF",
+            "code": "+594"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 74,
+        "fields": {
+            "country": "PF",
+            "code": "+689"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 75,
+        "fields": {
+            "country": "GA",
+            "code": "+241"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 76,
+        "fields": {
+            "country": "GM",
+            "code": "+220"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 77,
+        "fields": {
+            "country": "GE",
+            "code": "+995"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 78,
+        "fields": {
+            "country": "DE",
+            "code": "+49"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 79,
+        "fields": {
+            "country": "GH",
+            "code": "+233"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 80,
+        "fields": {
+            "country": "GI",
+            "code": "+350"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 81,
+        "fields": {
+            "country": "GR",
+            "code": "+30"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 82,
+        "fields": {
+            "country": "GL",
+            "code": "+299"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 83,
+        "fields": {
+            "country": "GD",
+            "code": "+1473"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 84,
+        "fields": {
+            "country": "GP",
+            "code": "+590"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 85,
+        "fields": {
+            "country": "GU",
+            "code": "+1671"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 86,
+        "fields": {
+            "country": "GT",
+            "code": "+502"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 87,
+        "fields": {
+            "country": "GG",
+            "code": "+44"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 88,
+        "fields": {
+            "country": "GN",
+            "code": "+224"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 89,
+        "fields": {
+            "country": "GW",
+            "code": "+245"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 90,
+        "fields": {
+            "country": "GY",
+            "code": "+595"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 91,
+        "fields": {
+            "country": "HT",
+            "code": "+509"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 92,
+        "fields": {
+            "country": "VA",
+            "code": "+379"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 93,
+        "fields": {
+            "country": "HN",
+            "code": "+504"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 94,
+        "fields": {
+            "country": "HK",
+            "code": "+852"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 95,
+        "fields": {
+            "country": "HU",
+            "code": "+36"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 96,
+        "fields": {
+            "country": "IS",
+            "code": "+354"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 97,
+        "fields": {
+            "country": "IN",
+            "code": "+91"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 98,
+        "fields": {
+            "country": "ID",
+            "code": "+62"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 99,
+        "fields": {
+            "country": "IR",
+            "code": "+98"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 100,
+        "fields": {
+            "country": "IQ",
+            "code": "+964"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 101,
+        "fields": {
+            "country": "IE",
+            "code": "+353"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 102,
+        "fields": {
+            "country": "IM",
+            "code": "+44"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 103,
+        "fields": {
+            "country": "IL",
+            "code": "+972"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 104,
+        "fields": {
+            "country": "IT",
+            "code": "+39"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 105,
+        "fields": {
+            "country": "JM",
+            "code": "+1876"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 106,
+        "fields": {
+            "country": "JP",
+            "code": "+81"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 107,
+        "fields": {
+            "country": "JE",
+            "code": "+44"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 108,
+        "fields": {
+            "country": "JO",
+            "code": "+962"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 109,
+        "fields": {
+            "country": "KZ",
+            "code": "+77"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 110,
+        "fields": {
+            "country": "KE",
+            "code": "+254"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 111,
+        "fields": {
+            "country": "KI",
+            "code": "+686"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 112,
+        "fields": {
+            "country": "KP",
+            "code": "+850"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 113,
+        "fields": {
+            "country": "KR",
+            "code": "+82"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 114,
+        "fields": {
+            "country": "KW",
+            "code": "+965"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 115,
+        "fields": {
+            "country": "KG",
+            "code": "+996"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 116,
+        "fields": {
+            "country": "LA",
+            "code": "+856"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 117,
+        "fields": {
+            "country": "LV",
+            "code": "+371"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 118,
+        "fields": {
+            "country": "LB",
+            "code": "+961"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 119,
+        "fields": {
+            "country": "LS",
+            "code": "+266"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 120,
+        "fields": {
+            "country": "LR",
+            "code": "+231"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 121,
+        "fields": {
+            "country": "LY",
+            "code": "+218"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 122,
+        "fields": {
+            "country": "LI",
+            "code": "+423"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 123,
+        "fields": {
+            "country": "LT",
+            "code": "+370"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 124,
+        "fields": {
+            "country": "LU",
+            "code": "+352"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 125,
+        "fields": {
+            "country": "MO",
+            "code": "+853"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 126,
+        "fields": {
+            "country": "MK",
+            "code": "+389"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 127,
+        "fields": {
+            "country": "MG",
+            "code": "+261"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 128,
+        "fields": {
+            "country": "MW",
+            "code": "+265"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 129,
+        "fields": {
+            "country": "MY",
+            "code": "+60"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 130,
+        "fields": {
+            "country": "MV",
+            "code": "+960"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 131,
+        "fields": {
+            "country": "ML",
+            "code": "+223"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 132,
+        "fields": {
+            "country": "MT",
+            "code": "+356"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 133,
+        "fields": {
+            "country": "MH",
+            "code": "+692"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 134,
+        "fields": {
+            "country": "MQ",
+            "code": "+596"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 135,
+        "fields": {
+            "country": "MR",
+            "code": "+222"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 136,
+        "fields": {
+            "country": "MU",
+            "code": "+230"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 137,
+        "fields": {
+            "country": "YT",
+            "code": "+262"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 138,
+        "fields": {
+            "country": "MX",
+            "code": "+52"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 139,
+        "fields": {
+            "country": "FM",
+            "code": "+691"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 140,
+        "fields": {
+            "country": "MD",
+            "code": "+373"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 141,
+        "fields": {
+            "country": "MC",
+            "code": "+377"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 142,
+        "fields": {
+            "country": "MN",
+            "code": "+976"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 143,
+        "fields": {
+            "country": "ME",
+            "code": "+382"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 144,
+        "fields": {
+            "country": "MS",
+            "code": "+1664"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 145,
+        "fields": {
+            "country": "MA",
+            "code": "+212"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 146,
+        "fields": {
+            "country": "MZ",
+            "code": "+258"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 147,
+        "fields": {
+            "country": "MM",
+            "code": "+95"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 148,
+        "fields": {
+            "country": "NA",
+            "code": "+264"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 149,
+        "fields": {
+            "country": "NR",
+            "code": "+674"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 150,
+        "fields": {
+            "country": "NP",
+            "code": "+977"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 151,
+        "fields": {
+            "country": "NL",
+            "code": "+31"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 152,
+        "fields": {
+            "country": "AN",
+            "code": "+599"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 153,
+        "fields": {
+            "country": "NC",
+            "code": "+687"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 154,
+        "fields": {
+            "country": "NZ",
+            "code": "+64"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 155,
+        "fields": {
+            "country": "NI",
+            "code": "+505"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 156,
+        "fields": {
+            "country": "NE",
+            "code": "+227"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 157,
+        "fields": {
+            "country": "NG",
+            "code": "+234"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 158,
+        "fields": {
+            "country": "NU",
+            "code": "+683"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 159,
+        "fields": {
+            "country": "NF",
+            "code": "+672"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 160,
+        "fields": {
+            "country": "MP",
+            "code": "+1670"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 161,
+        "fields": {
+            "country": "NO",
+            "code": "+47"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 162,
+        "fields": {
+            "country": "OM",
+            "code": "+968"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 163,
+        "fields": {
+            "country": "PK",
+            "code": "+92"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 164,
+        "fields": {
+            "country": "PW",
+            "code": "+680"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 165,
+        "fields": {
+            "country": "PS",
+            "code": "+970"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 166,
+        "fields": {
+            "country": "PA",
+            "code": "+507"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 167,
+        "fields": {
+            "country": "PG",
+            "code": "+675"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 168,
+        "fields": {
+            "country": "PY",
+            "code": "+595"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 169,
+        "fields": {
+            "country": "PE",
+            "code": "+51"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 170,
+        "fields": {
+            "country": "PH",
+            "code": "+63"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 171,
+        "fields": {
+            "country": "PN",
+            "code": "+872"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 172,
+        "fields": {
+            "country": "PL",
+            "code": "+48"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 173,
+        "fields": {
+            "country": "PT",
+            "code": "+351"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 174,
+        "fields": {
+            "country": "PR",
+            "code": "+1939"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 175,
+        "fields": {
+            "country": "QA",
+            "code": "+974"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 176,
+        "fields": {
+            "country": "RO",
+            "code": "+40"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 177,
+        "fields": {
+            "country": "RU",
+            "code": "+7"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 178,
+        "fields": {
+            "country": "RW",
+            "code": "+250"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 179,
+        "fields": {
+            "country": "RE",
+            "code": "+262"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 180,
+        "fields": {
+            "country": "BL",
+            "code": "+590"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 181,
+        "fields": {
+            "country": "SH",
+            "code": "+290"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 182,
+        "fields": {
+            "country": "KN",
+            "code": "+1869"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 183,
+        "fields": {
+            "country": "LC",
+            "code": "+1758"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 184,
+        "fields": {
+            "country": "MF",
+            "code": "+590"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 185,
+        "fields": {
+            "country": "PM",
+            "code": "+508"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 186,
+        "fields": {
+            "country": "VC",
+            "code": "+1784"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 187,
+        "fields": {
+            "country": "WS",
+            "code": "+685"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 188,
+        "fields": {
+            "country": "SM",
+            "code": "+378"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 189,
+        "fields": {
+            "country": "ST",
+            "code": "+239"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 190,
+        "fields": {
+            "country": "SA",
+            "code": "+966"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 191,
+        "fields": {
+            "country": "SN",
+            "code": "+221"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 192,
+        "fields": {
+            "country": "RS",
+            "code": "+381"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 193,
+        "fields": {
+            "country": "SC",
+            "code": "+248"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 194,
+        "fields": {
+            "country": "SL",
+            "code": "+232"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 195,
+        "fields": {
+            "country": "SG",
+            "code": "+65"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 196,
+        "fields": {
+            "country": "SK",
+            "code": "+421"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 197,
+        "fields": {
+            "country": "SI",
+            "code": "+386"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 198,
+        "fields": {
+            "country": "SB",
+            "code": "+677"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 199,
+        "fields": {
+            "country": "SO",
+            "code": "+252"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 200,
+        "fields": {
+            "country": "ZA",
+            "code": "+27"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 201,
+        "fields": {
+            "country": "SS",
+            "code": "+211"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 202,
+        "fields": {
+            "country": "GS",
+            "code": "+500"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 203,
+        "fields": {
+            "country": "ES",
+            "code": "+34"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 204,
+        "fields": {
+            "country": "LK",
+            "code": "+94"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 205,
+        "fields": {
+            "country": "SD",
+            "code": "+249"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 206,
+        "fields": {
+            "country": "SR",
+            "code": "+597"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 207,
+        "fields": {
+            "country": "SJ",
+            "code": "+47"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 208,
+        "fields": {
+            "country": "SZ",
+            "code": "+268"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 209,
+        "fields": {
+            "country": "SE",
+            "code": "+46"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 210,
+        "fields": {
+            "country": "CH",
+            "code": "+41"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 211,
+        "fields": {
+            "country": "SY",
+            "code": "+963"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 212,
+        "fields": {
+            "country": "TW",
+            "code": "+886"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 213,
+        "fields": {
+            "country": "TJ",
+            "code": "+992"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 214,
+        "fields": {
+            "country": "TZ",
+            "code": "+255"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 215,
+        "fields": {
+            "country": "TH",
+            "code": "+66"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 216,
+        "fields": {
+            "country": "TL",
+            "code": "+670"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 217,
+        "fields": {
+            "country": "TG",
+            "code": "+228"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 218,
+        "fields": {
+            "country": "TK",
+            "code": "+690"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 219,
+        "fields": {
+            "country": "TO",
+            "code": "+676"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 220,
+        "fields": {
+            "country": "TT",
+            "code": "+1868"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 221,
+        "fields": {
+            "country": "TN",
+            "code": "+216"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 222,
+        "fields": {
+            "country": "TR",
+            "code": "+90"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 223,
+        "fields": {
+            "country": "TM",
+            "code": "+993"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 224,
+        "fields": {
+            "country": "TC",
+            "code": "+1649"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 225,
+        "fields": {
+            "country": "TV",
+            "code": "+688"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 226,
+        "fields": {
+            "country": "UG",
+            "code": "+256"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 227,
+        "fields": {
+            "country": "UA",
+            "code": "+380"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 228,
+        "fields": {
+            "country": "AE",
+            "code": "+971"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 229,
+        "fields": {
+            "country": "GB",
+            "code": "+44"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 230,
+        "fields": {
+            "country": "US",
+            "code": "+1"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 231,
+        "fields": {
+            "country": "UY",
+            "code": "+598"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 232,
+        "fields": {
+            "country": "UZ",
+            "code": "+998"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 233,
+        "fields": {
+            "country": "VU",
+            "code": "+678"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 234,
+        "fields": {
+            "country": "VE",
+            "code": "+58"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 235,
+        "fields": {
+            "country": "VN",
+            "code": "+84"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 236,
+        "fields": {
+            "country": "VG",
+            "code": "+1284"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 237,
+        "fields": {
+            "country": "VI",
+            "code": "+1340"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 238,
+        "fields": {
+            "country": "WF",
+            "code": "+681"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 239,
+        "fields": {
+            "country": "YE",
+            "code": "+967"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 240,
+        "fields": {
+            "country": "ZM",
+            "code": "+260"
+        }
+    },
+    {
+        "model": "app_helpers.PhoneCode",
+        "pk": 241,
+        "fields": {
+            "country": "ZW",
+            "code": "+263"
+        }
+    }
+]
