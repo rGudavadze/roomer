@@ -16,6 +16,5 @@ python manage.py loadfixtures
 
 echo "Running app with gunicorn"
 gunicorn --user roomer --bind 0.0.0.0:8000  roomer.wsgi
-#python manage.py runserver 0.0.0.0:8000 --settings=roomer.settings.dev
 
 exec "$@"
