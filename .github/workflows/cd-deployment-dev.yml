@@ -1,6 +1,6 @@
 # Deploy to Cloud Run
 
-name: Deploy to Cloud Run
+name: Deploy Api to Cloud Run
 
 on:
   push:

@@ -15,10 +15,10 @@ RUN mkdir -p /opt/app/static
 RUN useradd -ms /bin/bash roomer
 RUN chown -R roomer:roomer /opt/app
 
-ADD scripts/docker-entrypoint.sh /home/roomer/docker-entrypoint.sh
+ADD scripts/celery-docker-entrypoint.sh /home/roomer/celery-docker-entrypoint.sh
 ADD scripts/check_service.py /home/roomer/check_service.py
 
-RUN chmod +x /home/roomer/docker-entrypoint.sh
+RUN chmod +x /home/roomer/celery-docker-entrypoint.sh
 USER roomer
 
 ENTRYPOINT ["/home/roomer/celery-docker-entrypoint.sh"]
