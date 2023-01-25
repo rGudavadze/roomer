@@ -7,6 +7,8 @@ from uuid import UUID
 from django.conf import settings
 from google.cloud import tasks_v2
 
+from apps.utils.logger import logger
+
 PROJECT_ID = "roomer-app-375320"
 PROJECT_LOCATION = "europe-west3"
 PROJECT_TASK = "roomer-tasks"
@@ -23,9 +25,13 @@ class CloudTaskClient:
             "roomer.settings.test",
         ]:
             base_dir = Path(__file__).resolve().parent.parent.parent
-            path = os.path.join(base_dir, "roomer-app-375320-c6460f617396.json")
+            try:
+                path = os.path.join(base_dir, "roomer-app-375320-c6460f617396.json")
+                self.client = tasks_v2.CloudTasksClient.from_service_account_file(path)
 
-            self.client = tasks_v2.CloudTasksClient.from_service_account_file(path)
+            except Exception as e:  # noqa
+                logger.error("Something went wrong.")
+                self.client = tasks_v2.CloudTasksClient()
         else:
             self.client = tasks_v2.CloudTasksClient()
 
