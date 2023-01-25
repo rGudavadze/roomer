@@ -1,12 +1,16 @@
 from rest_framework import status
-from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView
+from rest_framework.generics import (
+    CreateAPIView,
+    ListCreateAPIView,
+    RetrieveDestroyAPIView,
+)
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from apps.booking.enums import StatusChoice
 from apps.booking.models import Booking
 from apps.booking.permissions import IsBookingOwner
-from apps.booking.serializers import BookingSerializer
+from apps.booking.serializers import BookingSerializer, FinishBookingSerializer
 from apps.utils.logger import logger
 
 
@@ -43,3 +47,8 @@ class BookingDetailsView(RetrieveDestroyAPIView):
 
         logger.info(f"User - {instance.user_id} has cancelled reservation of room - {instance.room_id}")
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class FinishBookingAPIView(CreateAPIView):
+    serializer_class = FinishBookingSerializer
+    queryset = Booking.objects.all()

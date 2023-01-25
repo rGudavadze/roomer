@@ -14,8 +14,9 @@ Api to reserve a room
   This is the case when you start the project without docker-compose
 
 
-## Development Environment Set Up
+# Development Environment Set Up
 
+## Start project local
 ### Clone Project to your local environment
 ```bash
   git clone git@github.com:rGudavadze/roomer.git
@@ -26,9 +27,32 @@ Api to reserve a room
   python -m venv <env-name>
 ```
 
+### allow access to cloud services
+```text
+  paste "roomer-app-375320-c6460f617396.json" file in project root
+  directory in order to have access to the cloud services from local
+  machine.
+```
+
+### add env variables
+```text
+  create .env directory, copy files from .env-pattern dir and fill the
+  variables with appropriate values.
+```
+
 ### Install requirements
 ```bash
   pip install -r requirements.txt
+```
+
+### Run Migrations on local
+```bash
+  make run_migrations_local
+```
+
+### Run App on local
+```bash
+  make run_app_local
 ```
 
 ## Start project using docker-compose
