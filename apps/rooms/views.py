@@ -2,7 +2,6 @@ from datetime import datetime
 
 from django.core.exceptions import ValidationError
 from django.db.models import Q, QuerySet
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
 
 from apps.booking.enums import StatusChoice
@@ -20,20 +19,21 @@ class RoomViewSet(ModelViewSet):
     serializer_class = RoomSerializer
     queryset = Room.objects.all().prefetch_related("inventories")
     permission_classes = (IsAdminOrReadOnly,)
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ["bookings__end_time", "bookings__start_time", "seats"]
 
     def get_queryset(self):
         attrs = self.request.GET
         start_time = attrs.get("bookings__start_time")
         end_time = attrs.get("bookings__end_time")
+        seats = attrs.get("seats")
 
         if (start_time and not end_time) or (not start_time and end_time):
             raise ValidationError("start_time and end_time both or none")
 
         if start_time and end_time:
-            # TODO: remove query params from filter.
-            return self._available_rooms(start_time, end_time)
+            self.queryset = self._available_rooms(start_time, end_time)
+
+        if seats:
+            self.queryset = self.queryset.filter(seats__gte=seats)
 
         return self.queryset
 
