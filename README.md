@@ -1,8 +1,9 @@
-[Deploy to GCP Cloud Run](https://github.com/rGudavadze/roomer)
-
 # "Roomer" API
 
 Api to reserve a room
+
+### [Click to open deployed App swagger ui](https://roomer-api-dev-6u5f43nb7a-ey.a.run.app/api/schema/swagger-ui/)
+
 
 ## Project requirements
 
