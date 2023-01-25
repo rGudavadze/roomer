@@ -42,7 +42,7 @@ services:
   celery-worker:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-celery
     container_name: "roomer-celery-worker"
     env_file:
       - .env/.env.dev
@@ -52,9 +52,6 @@ services:
       - pgdb
       - roomer_api
       - rabbitmq
-    entrypoint: ""
-    command: celery -A roomer worker --loglevel=INFO --beat --scheduler django_celery_beat.schedulers:DatabaseScheduler -l info
-
 
 volumes:
   roomer_db_data:
