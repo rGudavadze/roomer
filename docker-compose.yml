@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile
     container_name: roomer_api
     env_file:
-      - .env/.env.dev
+      - .env/.env.dev.local
     volumes:
       - ./:/opt/app
     depends_on:
@@ -28,34 +28,31 @@ services:
     ports:
       - "8000:8000"
 
-  rabbitmq:
-    image: rabbitmq:3.10.5-management
-    container_name: "roomer-rabbitmq"
-    ports:
-      - "5673:5672"
-      - "15672:15672"
-    env_file:
-      - .env/.env.rabbitmq
-    volumes:
-      - roomer-data-rabbitmq:/var/lib/rabbitmq/mnesia/
-
-  celery-worker:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: "roomer-celery-worker"
-    env_file:
-      - .env/.env.dev
-    volumes:
-      - .:/opt/app
-    depends_on:
-      - pgdb
-      - roomer_api
-      - rabbitmq
-    entrypoint: ""
-    command: celery -A roomer worker --loglevel=INFO --beat --scheduler django_celery_beat.schedulers:DatabaseScheduler -l info
-
+#  rabbitmq:
+#    image: rabbitmq:3.10.5-management
+#    container_name: "roomer-rabbitmq"
+#    ports:
+#      - "5673:5672"
+#      - "15672:15672"
+#    env_file:
+#      - .env/.env.rabbitmq
+#    volumes:
+#      - roomer-data-rabbitmq:/var/lib/rabbitmq/mnesia/
+#
+#  celery-worker:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile-celery
+#    container_name: "roomer-celery-worker"
+#    env_file:
+#      - .env/.env.dev
+#    volumes:
+#      - .:/opt/app
+#    depends_on:
+#      - pgdb
+#      - roomer_api
+#      - rabbitmq
 
 volumes:
   roomer_db_data:
-  roomer-data-rabbitmq:
+#  roomer-data-rabbitmq:
