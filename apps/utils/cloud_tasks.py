@@ -7,8 +7,9 @@ from google.cloud import tasks_v2
 
 class CloudTaskClient:
     def __init__(self):
-        path = "/home/roma/Desktop/roomer/roomer-app-375320-c6460f617396.json"
-        self.client = tasks_v2.CloudTasksClient.from_service_account_file(path)
+        # path = "/home/roma/Desktop/roomer/roomer-app-375320-c6460f617396.json"
+        # self.client = tasks_v2.CloudTasksClient.from_service_account_file(path)
+        self.client = tasks_v2.CloudTasksClient()
         self.parent = self.client.queue_path("roomer-app-375320", "europe-west3", "roomer-tasks")
 
     @staticmethod
