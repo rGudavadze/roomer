@@ -2,6 +2,7 @@ import json
 from datetime import datetime, timedelta
 from uuid import UUID
 
+from django.conf import settings
 from google.cloud import tasks_v2
 
 
@@ -17,7 +18,7 @@ class CloudTaskClient:
         task = {
             "http_request": {
                 "http_method": "POST",
-                "url": "https://europe-west3-roomer-app-375320.cloudfunctions.net/roomer-function",
+                "url": settings.ENVS.get("ROOMER_FUNCTION_URL"),
             },
         }
 
