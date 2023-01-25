@@ -55,3 +55,20 @@ class BookingSerializer(serializers.ModelSerializer):
         )
 
         return not bookings.exists()
+
+
+class FinishBookingSerializer(serializers.Serializer):
+    booking_id = serializers.PrimaryKeyRelatedField(queryset=Booking.objects.all(), source="id")
+
+    def create(self, validated_data):
+        booking = validated_data.get("id")
+        if booking.status == StatusChoice.active.value:
+            booking.status = StatusChoice.finished.value
+            booking.save()
+
+        return booking
+
+    def to_representation(self, instance):
+        return {
+            "detail": f"booking - {instance.id} changed its status to {StatusChoice.finished.value}."
+        }
