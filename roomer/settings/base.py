@@ -19,7 +19,7 @@ from apps.utils import secret_manager
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-if os.environ.get("DJANGO_SETTINGS_MODULE") == "roomer.settings.test":
+if os.environ.get("DJANGO_SETTINGS_MODULE") in ["roomer.settings.test", "roomer.settings.dev-local"]:
     ENVS = os.environ
 
 else:

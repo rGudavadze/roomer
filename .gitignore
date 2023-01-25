@@ -115,6 +115,9 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# service account creds
+roomer-app-375320-c6460f617396.json
+
 # mypy
 .mypy_cache/
 
